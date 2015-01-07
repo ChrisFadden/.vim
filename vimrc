@@ -1,10 +1,45 @@
-set tabstop=4       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
+call pathogen#infect()
+call pathogen#helptags()
 
-set shiftwidth=4    " Indents will have a width of 4
+inoremap jk <Esc>
 
-set softtabstop=4   " Sets the number of columns for a TAB
+set nocompatible
 
-set expandtab       " Expand TABs to spaces
+filetype indent plugin on
+
+syntax on
+
+set ignorecase
+set smartcase
+
+set backspace=indent,eol,start
+
+set autoindent
+
+set nostartofline
+
+set visualbell
+
+set cmdheight=2
+
+set number
+
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+set laststatus=2
+
+set nobackup
+set noswapfile
+
+set t_Co=256
+
+colorscheme anotherdark
+
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+
+
+
+
