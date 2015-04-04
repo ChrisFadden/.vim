@@ -2,14 +2,29 @@ call pathogen#infect()
 call pathogen#helptags()
 
 inoremap jk <Esc>
+vnoremap y "+y
+nnoremap y "+y
+vnoremap p "+p
+nnoremap p "+p
+
 
 map fb :NERDTreeToggle<CR>
 
 set nocompatible
 
+filetype plugin on
+
 filetype indent plugin on
 
 syntax on
+
+autocmd BufNewFile,BufRead *.krak set syntax=cpp
+
+set grepprg=grep\ -nH\ $*
+
+"FORTRAN specific settings"
+let fortran_free_source=1
+let fortran_do_enddo=1
 
 set ignorecase
 set smartcase
