@@ -31,6 +31,8 @@ set smartcase
 
 set backspace=indent,eol,start
 
+set incsearch
+
 set autoindent
 
 set nostartofline
