@@ -2,13 +2,8 @@ call pathogen#infect()
 call pathogen#helptags()
 
 inoremap jk <Esc>
-vnoremap y "+y
-nnoremap y "+y
-vnoremap p "+p
-nnoremap p "+p
 
-
-map fb :NERDTreeToggle<CR>
+map Y y$
 
 set nocompatible
 
@@ -25,11 +20,19 @@ set grepprg=grep\ -nH\ $*
 "FORTRAN specific settings"
 let fortran_free_source=1
 let fortran_do_enddo=1
+let fortran_fold=1
+let fortran_fold_conditionals=1
+let fortran_fold_multilinecomments=1
+
+set foldmethod=syntax
+set foldlevelstart=1
 
 set ignorecase
 set smartcase
 
 set backspace=indent,eol,start
+
+set hlsearch
 
 set incsearch
 
@@ -49,12 +52,16 @@ set expandtab
 
 set laststatus=2
 
+set mouse=a
+
 set nobackup
 set noswapfile
 
 set t_Co=256
 
-colorscheme anotherdark
+colorscheme chance-of-storm
+
+set colorcolumn=80
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -62,8 +69,9 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_quiet_messages = {"!level": "errors"}
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
