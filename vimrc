@@ -2,18 +2,22 @@ call pathogen#infect()
 call pathogen#helptags()
 
 inoremap jk <Esc>
+nnoremap <CR> G
+nnoremap tj :tabnext<CR>
+nnoremap t; :tabprev<CR>
+nnoremap tn :tabedit 
+nnoremap td :tabclose<CR>
 
-map Y y$
+vmap Y "+y
+nmap P "+p
 
 set nocompatible
 
 filetype plugin on
 
-filetype indent plugin on
+"filetype indent plugin on
 
 syntax on
-
-autocmd BufNewFile,BufRead *.krak set syntax=cpp
 
 set grepprg=grep\ -nH\ $*
 
@@ -39,7 +43,7 @@ set incsearch
 set autoindent
 
 set nostartofline
-
+    
 set visualbell
 
 set cmdheight=2
