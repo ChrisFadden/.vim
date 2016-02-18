@@ -3,8 +3,8 @@ call pathogen#helptags()
 
 inoremap jk <Esc>
 nnoremap <CR> G
-nnoremap tj :tabnext<CR>
-nnoremap t; :tabprev<CR>
+nnoremap t; :tabnext<CR>
+nnoremap tj :tabprev<CR>
 nnoremap tn :tabedit 
 nnoremap td :tabclose<CR>
 
@@ -75,6 +75,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-std=c++14'
 let g:syntastic_quiet_messages = {"!level": "errors"}
 
 let g:cpp_class_scope_highlight = 1
