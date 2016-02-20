@@ -1,0 +1,51 @@
+#! /usr/bin/python
+import sys
+
+if (len(sys.argv) < 2):
+    print("Please call with a valid filename")
+    file = "FileNotFound"
+else:
+    file = sys.argv[1]
+
+fileName = file + ".tex"
+
+fh = open(fileName,'w')
+
+fh.write("\\documentclass[letterpaper]{article}\n")
+fh.write("\\usepackage{homework}\n")
+fh.write("\\graphicspath{{/home/cfadden/Documents/ECE4270/HW4}}\n\n")
+fh.write("% \\begin{lstlisting}[language=Matlab] \n")
+fh.write("%     This is MATLAB code \n")
+fh.write("% \\end{lstlisting} \n\n")
+fh.write("% \\begin{figure}[Here] \n")
+fh.write("%     \\includegraphics[width=\\textwidth]{pic.jpg} \n")
+fh.write("% \\end{figure} \n\n")
+fh.write("% \\[ \\begin{cases} \n")
+fh.write("%      \\sum_{n=0}^{n=\\infty} x & \\int_{k=0}^{k=n} y  \\leq 0 \\\ \n")
+fh.write("%      \\Big(\\frac{100 - x}{100}\\Big)^2 \geq 0 \\\ \n")
+fh.write("%     \\end{cases} \n")
+fh.write("% \\] \n\n")
+fh.write("% \\begin{empheq}[box=\\fbox]{align*} \n")
+fh.write("%     a &= b \\\ \n")
+fh.write("%     E &= mc \\\ \n")
+fh.write("% \\end{empheq} \n\n")
+fh.write("\n\\begin{document}\n")
+fh.write("\\noindent\n")
+fh.write("Christopher Fadden\n")
+fh.write("ECE 4270\n")
+fh.write("Homework 4\n")
+fh.write("\\begin{outline}[enumerate]\n")
+fh.write("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n")
+fh.write("%     Problem 1    \n")
+fh.write("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n")
+fh.write("\\1~\\\ \n")
+fh.write("  \\2~\\\ \n")
+fh.write("      \\begin{align*} \n")
+fh.write("          fx &= (1+2) + (3*1) \\\ \n")
+fh.write("          fx &= 3 + 3 \\\ \n")
+fh.write("      \\end{align*}   \n")
+fh.write("      \\boxed{fx = 6} \n")
+fh.write("\\end{outline}\n")
+fh.write("\\end{document}\n")
+
+
