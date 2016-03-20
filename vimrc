@@ -3,10 +3,9 @@ call pathogen#helptags()
 
 inoremap jk <Esc>
 nnoremap <CR> G
-nnoremap t; :tabnext<CR>
-nnoremap tj :tabprev<CR>
-nnoremap tn :tabedit 
-nnoremap td :tabclose<CR>
+nnoremap nn :NERDTree <CR>
+nnoremap tn :tabnext <CR>
+nnoremap tp :tabprevious <CR>
 
 vmap Y "+y
 nmap P "+p
@@ -82,6 +81,7 @@ let g:syntastic_quiet_messages = {"!level": "errors"}
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 
+let g:NERDTreeWinPos="right"
 let g:NERDTreeWinSize=32
 
 
