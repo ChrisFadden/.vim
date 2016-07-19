@@ -25,7 +25,7 @@ alias rm='rm -i'
 
 alias wget='wget -c'
 alias vim='gvim -v'
-#alias grep='ag'
+alias grep='ag'
 
 #tmux alias
 alias tmuxQuit='tmux kill-session -t 0'
@@ -38,6 +38,9 @@ alias open='ristretto'
 
 #Latex spell check alias
 alias latexSpellCheck='aspell -t -c'
+
+#Gnuplot alias
+alias plot='gnuplot -p'
 
 #Compiler Aliases
 alias fcc='gfortran'

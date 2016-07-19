@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Example of a Beamer Presentation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usecolortheme{dolphin}
+%\usecolortheme{orchid}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+
+\title{This Is The Title}
+\subtitle{because everything needs a subtitle}
+\author{Chris Fadden \inst{1} \and George Burdell \inst{2}}
+\institute{
+  \inst{1}
+  Pennsylvannia State University \\
+  State College, PA
+
+  \inst{2}
+  Georgia Institute of Technology \\
+  Atlanta, GA
+}
+
+\begin{document}
+  %Title Slide
+  \frame{\titlepage}
+
+  %Slide 1
+  \begin{frame}
+    \frametitle{First Frame}
+    \framesubtitle{Columns} 
+    \begin{columns}
+      
+      \begin{column}{0.47\textwidth}
+        \begin{itemize}
+          \item{Bullet 1}
+          \item{Bullet 2}
+          \item{Bullet 3}
+        \end{itemize}
+      \end{column}
+
+      \begin{column}{0.5\textwidth}
+        A nice picture to go along with the bullets
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  %Slide 2
+  \begin{frame}
+    \begin{block}{This is a block}
+      \begin{align}
+        1 + 1 = 2
+      \end{align}
+    \end{block}
+    \begin{alertblock}{This is an alert block}
+      \begin{align*}
+        \frac{df}{dx} = sin(x)
+      \end{align*}
+    \end{alertblock}
+    \begin{exampleblock}{This is an example block}
+      \begin{align}
+        V = IR
+      \end{align}
+    \end{exampleblock}
+  \end{frame}
+
+
+
+
+
+
+
+\end{document}
+
+
+
+

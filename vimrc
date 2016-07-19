@@ -3,7 +3,7 @@ call pathogen#helptags()
 
 inoremap jk <Esc>
 nnoremap <CR> G
-nnoremap nn :NERDTree <CR>
+nnoremap NN :NERDTree <CR>
 nnoremap tn :tabnext <CR>
 nnoremap tp :tabprevious <CR>
 
@@ -23,12 +23,12 @@ set grepprg=grep\ -nH\ $*
 "FORTRAN specific settings"
 let fortran_free_source=1
 let fortran_do_enddo=1
-let fortran_fold=1
-let fortran_fold_conditionals=1
-let fortran_fold_multilinecomments=1
+"let fortran_fold=1
+"let fortran_fold_conditionals=1
+"let fortran_fold_multilinecomments=1
 
-set foldmethod=syntax
-set foldlevelstart=1
+"set foldmethod=syntax
+"set foldlevelstart=1
 
 set ignorecase
 set smartcase
@@ -66,27 +66,12 @@ colorscheme chance-of-storm
 
 set colorcolumn=80
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++14'
-let g:syntastic_quiet_messages = {"!level": "errors"}
-
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 
 let g:NERDTreeWinPos="right"
 let g:NERDTreeWinSize=32
 
-
-
-
-
-
+let g:clang_format#code_style="llvm"
+let g:clang_format#auto_format=1
 
