@@ -1,0 +1,68 @@
+\section{Scatter Matrix Derivation}\label{sec:scatter}
+
+%\begin{figure}[here]
+%\centering
+%\includegraphics[width=2.5in]{DielectricStructure}
+%\caption{Layered Dielectric Structure}
+%\label{fig:layers}
+%\end{figure}
+
+ The Scattering Matrix Method is best utilized when dealing with layered 
+ structures with different electrical characteristics, such as the general form 
+ in Fig. 2.%\ref{fig:layers}.  
+ Each layer would have its own scattering matrix, 
+ which would then be combined with others to form a global matrix for the 
+ structure.  However, in the normal derivations of the scattering matrices, each 
+ matrix depends on the material on either side.  In order to interchange each 
+ matrix in a periodic structure, and parallelize the computation, each layer can 
+ be modeled as having free space on either side.  The layers will have zero 
+ thickness, therefore not affecting the overall solution, but will ease the 
+ computation of each scattering matrix.   
+
+%\begin{figure}[here]
+%\centering
+%\includegraphics[width=2.5in]{ScatterMatrixDiagram}
+%\caption{Scatter Matrix Diagram}
+%\label{fig:ScatterDiagram}
+%\end{figure}
+
+ The scattering matrix, seen in Fig. 2. %\ref{fig:ScatterDiagram}
+ , for each layer 
+ will relate $A^+$ to $A^-$ from (\ref{eq:10}) and (\ref{eq:11}), equivalently 
+ the incident and reflected waves.  When combined with all other layers, the 
+ global scattering matrix will give a relation between the total incident wave 
+ and the reflected and transmitted waves.  The eigensolutions provide the 
+ building blocks for creating the scattering matrix, if we arrange them as 
+ follows: 
+
+\begin{equation}
+  A_i = W_i^{-1}W_0 + V_i^{-1}V_0
+  \label{eq:12}
+  \end{equation}
+\begin{equation}
+  B_i = W_i^{-1}W_0 - V_i^{-1}V_0
+  \label{eq:13}
+  \end{equation}
+\begin{equation}
+  X_i = e^{-\lambda_i k_0 L_i}
+  \label{eq:14}
+  \end{equation}
+
+The A and B parameters are measures of how much each layer’s eigenvector 
+deviates from the boundary, in this case free space.  X is a measure of the 
+propagation constant, scaled by the wavenumber and the length of each individual 
+layer.  If the material is assumed to be lossless, there is a symmetry in the 
+scattering matrix, and only two values need to be calculated.  The equations for 
+$S_{11}$ and $S_{12}$ are given here, and are equal to $S_{22}$ and $S_{21}$ 
+respectively:
+
+\begin{equation}
+  S_{11} = (A - BXA^{-1}XB)^{-1}(XBA^{-1}XA - B)
+  \label{eq:15}
+\end{equation}
+\begin{equation}
+  S_{12} = (A - BXA^{-1}XB)^{-1}X(A - BA^{-1}B)
+  \label{eq:16}
+  \end{equation}
+
+

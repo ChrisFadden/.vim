@@ -1,0 +1,149 @@
+\section{Matrix Wave Equation Derivation}\label{sec:wave}
+The coordinate system that will be used in the derivation is the Cartesian 
+coordinate system.  Therefore, instead of the more common r, $\theta$, and 
+$\phi$ coordinates, the coordinates will be given in terms of x, y, and z.  
+Since this method is commonly used in the optical community, and the fact that 
+there are no boundaries except in one direction, standing wave modes are just 
+described by their general direction.  They do not play a larger role in the 
+derivation, the equations describing their direction are given here for 
+completeness:
+\begin{equation}
+a_{TE} = \frac{k_{inc} \times n}{|| {k_{inc} \times n ||} }
+\label{eq:1}
+\end{equation}
+\begin{equation}
+a_{TM} = \frac{ a_{TE} \times k_{inc} } {|| a_{TE} \times k_{inc} || }
+\label{eq:2}
+\end{equation}
+
+ While Maxwell’s Equations totally govern electrodynamics, the two equations 
+ that represent coupled traveling waves are the curl equations.  For numerical 
+ stability, this method uses a "normalized" magnetic field, which is scaled by 
+ the impedance.  With the normalized field, and in phasor form, the curl 
+ equations are given as: 
+
+ \begin{equation}
+ \nabla \times E = k_0 \mu_r H
+ \label{eq:3}
+ \end{equation}
+ \begin{equation}
+ \nabla \times H = k_0 \epsilon_r E
+ \label{eq:4}
+ \end{equation}
+
+  The structures analyzed using this technique are assumed to be homogeneous in 
+  the x and y directions and have propagation governed by complex exponentials.  
+  Therefore, any partial derivatives in those two directions, in general is 
+  described by: 
+
+  \begin{equation}
+  \frac{\partial A}{\partial w} = j k_w A
+  \label{eq:5}
+  \end{equation}
+
+   This simplifies the partial derivatives in equations (\ref{eq:3}) and 
+   (\ref{eq:4}), and allows any partial derivatives in the z direction to 
+   become ordinary derivatives.  These simplifications, and combining like terms 
+   gives the following two matrix equations: 
+
+   \small
+
+   \begin{equation}
+   \frac{d}{dz} \left[ {\begin{array}{c}
+               E_x \\
+               E_y \\
+               \end{array} } \right]
+            = \frac{1}{\epsilon_r}
+            \left[ {\begin{array}{cc}
+               k_x k_y & \mu_r \epsilon_r - k_x^2 \\
+               k_y^2 - \mu_r \epsilon_r & - k_x k_y \\
+               \end{array} } \right]
+            \left[ {\begin{array}{c}
+               H_x \\
+               H_y \\
+               \end{array} } \right]
+    \label{eq:6}
+    \end{equation}
+   \begin{equation}
+   \frac{d}{dz} \left[ {\begin{array}{c}
+               H_x \\
+               H_y \\
+               \end{array} } \right]
+            = \frac{1}{\mu_r}
+            \left[ {\begin{array}{cc}
+               k_x k_y & \mu_r \epsilon_r - k_x^2 \\
+               k_y^2 - \mu_r \epsilon_r & - k_x k_y \\
+               \end{array} } \right]
+            \left[ {\begin{array}{c}
+               E_x \\
+               E_y \\
+               \end{array} } \right]
+    \label{eq:7}
+    \end{equation}
+
+    \normalsize
+
+     Equations (\ref{eq:6}) and (\ref{eq:7}) give a relationship between the E 
+     and H fields, but do not describe propagation in the current form.  The 
+     wave equation, which does govern propagation, is given using the second 
+     derivative of the given fields.  Substituting equation (\ref{eq:6}) into 
+     (\ref{eq:7}), and (\ref{eq:7}) into (\ref{eq:6}), gives the final form of 
+     the wave equations:
+
+   \begin{equation}
+   \frac{d^2}{d^2z} \left[ {\begin{array}{c}
+               E_x \\
+               E_y \\
+               \end{array} } \right]
+            = \frac{1}{\epsilon_r}
+            \left[ {\begin{array}{cc}
+               -k_z^2 & 0 \\
+               0 & -k_z^2 \\
+               \end{array} } \right]
+            \left[ {\begin{array}{c}
+               E_x \\
+               E_y \\
+               \end{array} } \right]
+    \label{eq:8}
+    \end{equation}
+   \begin{equation}
+   \frac{d^2}{d^2z} \left[ {\begin{array}{c}
+               H_x \\
+               H_y \\
+               \end{array} } \right]
+            = \frac{1}{\mu_r}
+            \left[ {\begin{array}{cc}
+               -k_z^2 & 0 \\
+               0 & -k_z^2 \\
+               \end{array} } \right]
+            \left[ {\begin{array}{c}
+               H_x \\
+               H_y \\
+               \end{array} } \right]
+    \label{eq:9}
+    \end{equation}
+
+ Equations (\ref{eq:8}) and (\ref{eq:9}) are both eigenvalue problems with 
+ similar solutions.  The square root of the eigenvalue is the propagation 
+ constant through the material.  The eigenvectors are split up to create useful 
+ scaling factors.  The A vector found in the solutions is used to create the 
+ scattering matrix: 
+
+ \begin{equation}
+ \left[ {\begin{array}{c}
+               E_x \\
+               E_y \\
+               \end{array} } \right]
+            =  We^{-j \beta z}A^+ + W^{+j \beta z}A^-
+ \label{eq:10}
+ \end{equation}
+  \begin{equation}
+ \left[ {\begin{array}{c}
+              H_x \\
+              H_y \\
+              \end{array} } \right]
+            = Ve^{-j \beta z}A^+ + V^{-j \beta z}A^-
+ \label{eq:11}
+ \end{equation}
+
+
