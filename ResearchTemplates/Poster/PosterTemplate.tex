@@ -1,4 +1,4 @@
-\documentclass[landscape,a0paper,fontscale=0.285]{baposter} 
+\documentclass[landscape,a0paper,fontscale=0.285]{baposter}
 
 \usepackage{graphicx} 
 %\graphicspath{{figures/}} 
@@ -36,7 +36,8 @@ headerheight=0.1\textheight, % Height of the header
 headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
 headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
 %textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
-linewidth=2pt % Width of the border lines around content boxes
+linewidth=2pt, % Width of the border lines around content boxes
+columns=3
 }
 
 %{\includegraphics[height=4em]{logo.png}} % First university/lab logo on the left
@@ -51,7 +52,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Materials and Methods}{name=methods,column=0,below=introduction}
 {\input{./Sections/Methods.tex}}
 
-\headerbox{Conclusion}{name=conclusion,column=0,below=methods}
+\headerbox{Conclusion}{name=conclusion,column=0,below=methods,above=bottom}
 {\input{./Sections/Conclusion.tex}}
 
 \headerbox{Result 1}{name=result1,column=1,row=0,bottomaligned=methods}
@@ -60,10 +61,10 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Result 2}{name=result2,column=2,row=0,bottomaligned=methods}
 {\input{./Sections/Result1.tex}}
 
-\headerbox{Result 3}{name=result3,column=3,row=0,bottomaligned=methods}
+\headerbox{Result 3}{name=result4,column=1,row=2,below=result1}
 {\input{./Sections/Result1.tex}}
 
-\headerbox{References}{name=references,column=3,below=result3,bottomaligned=conclusion}{
+\headerbox{References}{name=references,column=2,below=result2,bottomaligned=conclusion}{
 \smaller % Reduce the font size in this block
 \renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
 \nocite{*} % Insert publications even if they are not cited in the poster
