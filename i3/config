@@ -164,7 +164,7 @@ bindsym $mod+a exec --no-startup-id ardour4
 bindsym $mod+i exec --no-startup-id inkscape
 bindsym $mod+p exec --no-startup-id okular
 
-exec nitrogen --restore
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id thunar --daemon
-
+exec --no-startup-id xrandr --output HDMI-0 --auto --left-of DVI-I-1
 

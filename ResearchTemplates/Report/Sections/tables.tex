@@ -1,0 +1,24 @@
+  %Tables (w/ R)
+  \input{./table/table.tex}
+  
+  %Theorems
+     
+  %Algorithms
+  \begin{algorithm}
+    \caption{Conjugate Gradient Method}
+      \label{alg:cg}
+      \begin{algorithmic}
+        \STATE $\vec{r}_0 \rightarrow \vec{a}(\phi,\theta) - R_{yy}\vec{w}$
+        \STATE $\vec{p}_0 \rightarrow \vec{r}_0$
+        \WHILE{$|\vec{r_i}| > tolerance$}
+          \STATE $a_i \rightarrow \frac{\vec{r}_i^T \vec{r}_i}{\vec{p}_i^T R_{yy}\vec{p}_i}$
+          \STATE $\vec{w}_{i+1} \rightarrow \vec{w} + a_i \vec{p}_i$
+          \STATE $\vec{r}_{i+1} \rightarrow \vec{r}_i - a_i R_{yy}\vec{p}_i$
+          \STATE $b_i \rightarrow \frac{\vec{r}_{i+1}^T\vec{r}_{i+1}}{\vec{r}_i^T\vec{r}_i}$
+          \STATE $\vec{p}_{i+1} \rightarrow \vec{r}_{i+1} + b_i \vec{p}$
+        \ENDWHILE
+      \end{algorithmic}
+    \end{algorithm}
+  
+  %Inputting code from elsewhere 
+  \lstinputlisting[language=R,basicstyle=\small]{./table/tableMaker.r}

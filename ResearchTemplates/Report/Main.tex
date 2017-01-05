@@ -1,0 +1,54 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{lipsum}
+
+%Useful for [1]-[3]
+\usepackage{cite}
+
+%Algorithms
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{listings}
+
+%Math Packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage{commath} %derivative, norm etc.
+\usepackage{physics}
+\usepackage{bm} %bold
+
+%Figure packages
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[justification=centering]{caption}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\begin{document}
+
+\title{Sample Latex Showing Various Features for Research Papers}
+
+\author{Christopher~Fadden \\
+        School~of~Electrical~Engineering~and~Computer~Science \\
+        Pennsylvannia~State~University \\
+        State College,~PA,~USA}
+
+% make the title area
+\maketitle
+
+\input{./Sections/abstract.tex}
+\begin{IEEEkeywords}
+  Greek Equations, Matrices, Tables, Figures, Source Code, Theorems
+\end{IEEEkeywords}
+
+\input{./Sections/introduction.tex}
+\input{./Sections/citations.tex}
+\input{./Sections/equations.tex}
+\input{./Sections/figures.tex}
+\input{./Sections/tables.tex}
+\bibliographystyle{IEEEtran}
+\bibliography{Test.bib}
+
+\end{document}

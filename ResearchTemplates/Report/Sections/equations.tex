@@ -1,0 +1,50 @@
+\section{Equations} \label{sec:Equations} 
+  This demonstrates various equations.
+  
+  Numbered vs unnumbered equations:
+
+  \begin{equation}
+    \vec{w} = a \vec{x} + \vec{y}   %Vectors
+  \end{equation}
+  
+  \begin{equation*}
+    \begin{aligned}
+      x - y \approx z \\            %approx
+      x + y \ge z \\                %greater than or equal to 
+      x + w \le z \\                %less than or equal to
+      x \in \mathbb{R}^n \\         %set notation
+      y \to x - z^{\dagger} \\      %Hermitian dagger
+    \end{aligned}
+  \end{equation*}
+  
+  Optimization algorithms
+
+  \begin{equation}
+    \begin{aligned}
+      & \underset{\bm{x}}{\text{minimize}}
+      & & \bm{x}^T A \bm{x} \\
+      & \text{subject to}
+      & & \norm{\bm{x}} < 1 \\          %norm and bold operations
+    \label{eq:EQlabel}
+    \end{aligned}
+  \end{equation}
+ 
+  Equations can be referenced (\ref{eq:EQlabel}).
+
+ \begin{equation*}
+  \begin{aligned}
+      & & \od[4]{f}{x} = \pd[4]{f}{x} \\              %ODE / PDE
+      & & \frac{x - 4}{5} = \md{f}{5}{x}{2}{y}{2} \\  %mixed partials
+      & & A = \iiint \mu \vec{J} dV \\                %integrals
+      & & x = \sum_{i=1}^N a_ib_i \\                  %sums
+  \end{aligned}
+ \end{equation*}
+
+  \begin{equation}
+    \bra{\Psi}\ket{\Psi} = \begin{bmatrix}            %Bra Ket and matrix
+                              1 & 0 & 0 \\
+                              0 & 1 & 0 \\
+                              0 & 0 & 1 \\
+                            \end{bmatrix}
+  \end{equation}
+ 
