@@ -29,7 +29,6 @@ alias grep='ag'
 alias emacs='emacs -nw'
 
 alias latex2word='pandoc -f latex -t docx -F pandoc-crossref --bibliography ~/Github/BibTex/Electromagnetics/Emag.bib -o test.docx'
-alias fixZoteroBib="sed -i -e 's/journaltitle/journal/g'"
 
 #tmux alias
 alias tmuxQuit='tmux kill-session -t 0'
