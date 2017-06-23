@@ -1,0 +1,17 @@
+dhclient (sets up internet)
+
+create /etc/sysconfig/network
+	NETWORKING=yes
+	HOSTNAME=hostname
+
+/etc/sysconfig/network-scripts/ifcfg-eth*
+	ONBOOT=yes
+
+get IP from ifconfig -a
+
+/etc/hosts/
+	192.168.2.9 hostname
+
+ssh-keygen
+
+ssh-copy-id $host (make host an ENV variable)

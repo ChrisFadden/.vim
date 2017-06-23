@@ -51,7 +51,7 @@ set number
 
 set shiftwidth=2
 set softtabstop=2
-set expandtab
+set tabstop=2
 
 set laststatus=2
 
@@ -74,4 +74,9 @@ let g:NERDTreeWinSize=32
 
 let g:clang_format#code_style="llvm"
 let g:clang_format#auto_format=1
+
+vnoremap cc :call NERDComment('0','toggle')<C-m>
+nnoremap cc :call NERDComment('0','toggle')<C-m>
+
+
 

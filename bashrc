@@ -7,10 +7,16 @@
 
 #MATLAB is stupid
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:usr/local/MATLAB/usr/
+export PETSC_DIR=/opt/petsc/linux-c-opt
+export PETSC_ARCH=linux-gnu-c-debug
 
 #Make Clang default C++ compiler
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
+
+#Cluster alias
+export pilot='root@192.168.2.8'
+export BugBoy='root@192.168.2.9'
 
 #ls aliases
 alias ls='ls --color=auto'
@@ -28,7 +34,9 @@ alias vim='gvim -v'
 alias grep='ag'
 alias emacs='emacs -nw'
 
-alias latex2word='pandoc -f latex -t docx -F pandoc-crossref --bibliography ~/Github/BibTex/Electromagnetics/Emag.bib -o test.docx'
+alias latex2wordBib='pandoc -f latex -t docx -F pandoc-crossref --bibliography ~/Github/BibTex/Electromagnetics/Emag.bib -o test.docx'
+alias latex2word='pandoc -f latex -t docx -F pandoc-crossref -o test.docx'
+alias latexPretty='~/.vim/latexPretty.sh'
 
 #tmux alias
 alias tmuxQuit='tmux kill-session -t 0'
@@ -50,7 +58,7 @@ alias latexSpellCheck='aspell -t -c'
 alias plot='gnuplot -p'
 
 #cmake alias
-alias cmakeDebug='cmake -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=DEBUG ..'
+alias cmakeDebug='cmake -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug ..'
 
 #Compiler Aliases
 alias fcc='gfortran'

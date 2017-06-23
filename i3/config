@@ -162,7 +162,7 @@ bindsym $mod+t exec --no-startup-id thunar
 bindsym $mod+o exec --no-startup-id openshot
 bindsym $mod+a exec --no-startup-id ardour4
 bindsym $mod+i exec --no-startup-id inkscape
-bindsym $mod+p exec --no-startup-id okular
+bindsym $mod+p exec --no-startup-id pavucontrol
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id thunar --daemon
