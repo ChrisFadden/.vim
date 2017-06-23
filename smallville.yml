@@ -1,0 +1,22 @@
+---
+- hosts:  Smallville
+  tasks:
+  
+  #*************************
+  # Ensure Updated Packages
+  #*************************
+    - name: update Vim
+      yum:  pkg=vim state=latest
+    - name: update gcc
+      yum:  pkg=gcc state=latest
+    - name:  update git
+      yum:  pkg=git state=latest
+  
+  #******************************
+  # Ensure dot file configuration
+  #******************************
+    - name: Download dot file
+      git: 
+        repo: https://github.com/ChrisFadden/.vim.git 
+        dest: /root/.vim
+        force: no
