@@ -60,9 +60,7 @@ set mouse=a
 set nobackup
 set noswapfile
 
-set t_Co=256
-
-colorscheme chance-of-storm
+colorscheme 3dglasses
 
 set colorcolumn=80
 

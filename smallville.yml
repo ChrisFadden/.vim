@@ -2,16 +2,90 @@
 - hosts:  Smallville
   tasks:
   
-  #*************************
-  # Ensure Updated Packages
-  #*************************
+  #******
+  # Update repos
+  #******
+    - name:  Update EPEL-release
+      package:  pkg=epel-release
+
+  #******************************
+  # Install terminal text editors
+  #******************************
     - name: update Vim
-      yum:  pkg=vim state=latest
-    - name: update gcc
-      yum:  pkg=gcc state=latest
-    - name:  update git
-      yum:  pkg=git state=latest
+      package:  pkg=gvim state=latest
+    - name: update Emacs
+      package:  pkg=emacs state=latest
+    - name: update nano
+      package:  pkg=nano state=latest
   
+  #***********************
+  # Build tools
+  #***********************
+    - name: update Cmake
+      package:  pkg=cmake state=latest
+    - name: update NINJA
+      package:  pkg=ninja-build state=latest
+
+  #**********************************
+  # Install Compilers / Interpreters
+  #********************************** 
+
+    #C/C++
+    - name: update gcc
+      package:  pkg=gcc state=latest
+    - name: update GCC - C++
+      package:  pkg=gcc-c++ state=latest
+    - name: update clang
+      package:  pkg=clang state=latest
+    - name: update valgrind
+      package:  pkg=valgrind state=latest
+    - name: update GDB
+      package:  pkg=gdb state=latest
+    
+    #Python
+    - name: update python
+      package:  pkg=python state=latest
+    - name: update numpy
+      package:  pkg=numpy  state=latest
+    - name: update scipy
+      package:  pkg=scipy state=latest
+    - name: update matplotlib
+      package:  pkg=python-matplotlib state=latest 
+    
+    # R
+    - name: update R
+      package:  pkg=R state=latest
+    
+    # MATLAB
+    - name: update Octave
+      package:  pkg=octave state=latest
+    
+    # Scientific packages
+    - name: update FFTW
+      package:  pkg=fftw state=latest
+    - name: update BLAS
+      package:  pkg=blas-devel state=latest
+    - name: update LAPACK
+      package:  pkg=lapack-devel state=latest
+    - name: update openMPI
+      package:  pkg=openmpi state=latest 
+    - name: update HDF5
+      package:  pkg=hdf5-devel state=latest
+
+  #*****************************************
+  # Install Distributed Computation Software
+  #*****************************************
+#    - name: update TORQUE
+      #package:  pkg='torque*' state=latest
+  
+  #*******************************
+  # Install Version Control
+  #*******************************
+    - name:  update Git
+      package:  pkg=git state=latest
+    - name: update Subversion 
+      package:  pkg=subversion  state=latest
+
   #******************************
   # Ensure dot file configuration
   #******************************
@@ -21,3 +95,14 @@
         dest: /root/.vim
     - name: Update submodules
       command:  git submodule update --init --recursive chdir=/root/.vim
+#    - name: Remove config files
+#      command:  rm ~/.vimrc ~/.bashrc
+    - name: Link vimrc
+      src:  ~/.vim/vimrc 
+      dst:  ~/.vimrc
+      state:  link
+    - name: Link bashrc
+      src:  ~/.vim/bashrc 
+      dst:  ~/.bashrc
+      state:  link
+
