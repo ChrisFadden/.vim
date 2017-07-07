@@ -1,0 +1,4 @@
+#!/usr/bin/Rscript
+
+args <- commandArgs(TRUE)
+install.packages(args,repo="http://lib.stat.cmu.edu/R/CRAN/")

@@ -34,9 +34,11 @@ alias vim='gvim -v'
 alias grep='ag'
 alias emacs='emacs -nw'
 
-alias latex2wordBib='pandoc -f latex -t docx -F pandoc-crossref --bibliography ~/Github/BibTex/Electromagnetics/Emag.bib -o test.docx'
-alias latex2word='pandoc -f latex -t docx -F pandoc-crossref -o test.docx'
 alias latexPretty='~/.vim/latexPretty.sh'
+alias rPretty='~/.vim/rPretty'
+alias pyPretty='autopep8 --in-place -a -a'
+alias installR='sudo ~/.vim/installR'
+
 
 #tmux alias
 alias tmuxQuit='tmux kill-session -t 0'
