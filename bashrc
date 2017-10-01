@@ -34,9 +34,11 @@ alias vim='gvim -v'
 alias grep='ag'
 alias emacs='emacs -nw'
 
+#alias rubber=latexrun
+
 alias latexPretty='~/.vim/latexPretty.sh'
 alias rPretty='~/.vim/rPretty'
-alias pyPretty='autopep8 --in-place -a -a'
+alias pyPretty='autopep8 --in-place --aggressive --aggressive'
 alias installR='sudo ~/.vim/installR'
 
 

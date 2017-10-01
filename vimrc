@@ -73,8 +73,4 @@ let g:NERDTreeWinSize=32
 let g:clang_format#code_style="llvm"
 let g:clang_format#auto_format=1
 
-vnoremap cc :call NERDComment('0','toggle')<C-m>
-nnoremap cc :call NERDComment('0','toggle')<C-m>
-
-
 
