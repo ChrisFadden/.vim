@@ -47,3 +47,6 @@ doc/tags
 ## backup files
 *.bak
 >>>>>>> 5f4c2dce52d975f52009121bd4c1f0eab7cfe554
+
+latex.out/
+
