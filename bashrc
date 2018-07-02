@@ -17,6 +17,11 @@ export CXX=/usr/bin/clang++
 #Cluster alias
 export pilot='root@192.168.2.8'
 export BugBoy='root@192.168.2.9'
+export bmeServer='czf41@bme-004200006.bme.psu.edu'
+export coeVPN='--juniper https://sslvpn.engr.psu.edu'
+
+export fixPrint='systemctl restart avahi-daemon.service'
+
 
 #ls aliases
 alias ls='ls --color=auto'
@@ -33,6 +38,7 @@ alias wget='wget -c'
 alias vim='gvim -v'
 alias grep='ag'
 alias emacs='emacs -nw'
+alias getdp='/opt/getdp'
 
 #alias rubber=latexrun
 
@@ -72,5 +78,5 @@ alias compose='~/Github/MusicCompiler/compose'
 #Kraken nonsense
 alias kcc='~/Github/kraken/build/kraken'
 alias kg='~/Github/kraken/krakenGrammer.kgm'
-
+PATH=$PATH:/opt/
 PS1='[\u@\h \W]\$ '
