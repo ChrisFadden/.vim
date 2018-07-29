@@ -22,6 +22,8 @@ export coeVPN='--juniper https://sslvpn.engr.psu.edu'
 
 export fixPrint='systemctl restart avahi-daemon.service'
 
+export DhanvantariMain='/home/cfadden/Github/Dhanvantari/Main/'
+export DhanvantariProj='/home/cfadden/Documents/Research/Dhanvantari/'
 
 #ls aliases
 alias ls='ls --color=auto'
